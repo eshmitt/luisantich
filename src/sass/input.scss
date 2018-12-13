@@ -1,0 +1,245 @@
+$font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$off_white: #F5F5F5;
+$dark_gray: #1f2225;
+
+body {
+  min-height: 100vh;
+  background-color: $off_white;
+  font-family: $font-body;
+  margin: 0px;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[class*="col-"] {
+  float: left;
+  height: 100vh;
+}
+
+[class*="col-md-"] {
+  width: 100%;
+}
+
+.row {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.wrapper:after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+
+.wrapper {
+  width: 100%;
+  display: table;
+  margin: 0 auto;
+  float: left;
+}
+
+// grid system variables
+$grid-columns: 12;
+$max-width: 100%;
+$col-1-width: $max-width / $grid-columns;
+
+// create loop for columns
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    // create separate columns
+    width: 100% / $grid-columns * $i;
+  }
+}
+
+// create loop for offsets
+@for $i from 1 through $grid-columns {
+  .offset#{$i} {
+    margin-left: 100% / $grid-columns * $i;
+  }
+}
+
+
+
+.main_section {
+  clear: both;
+  background-color:$off_white;
+  position: relative;
+  min-height: 90vh;
+  text-align: center;
+  padding-top: 25%;
+}
+
+.right_section_white {
+  clear: both;
+  background-color: $off_white;
+    p {
+      width: 400px;
+    }
+}
+
+.right_section_black {
+  clear: both;
+  background-color: $dark_gray;
+    p {
+      width: 400px;
+    }
+}
+
+.side_preview {
+  text-align: center;
+    img {
+      width: 100%;
+      padding: 10px;
+      bottom: 0;
+      right: 0;
+      height: auto;
+    }
+}
+
+.image_content {
+    width: 100%;
+    padding: 30px;
+    bottom: 0;
+    height: auto;
+}
+
+.work_content-ul {
+  text-align: center;
+} 
+
+.menu {
+  position: fixed;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+    &_element {
+      width: 30px;
+      height: 5px;
+      margin: 0 0 4px 0;
+      background:black;
+      border: 0.2px solid white; 
+    }
+}
+
+
+
+.img_overlay {
+  width: 100vw;
+  height: 100vw;
+  display: none;
+}
+
+.nav {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.85;
+  position: fixed;
+  top: 0;
+
+    &_overlay-ul {
+      float: left;
+      height: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+    &_link {
+      position: relative;
+      font-size: 30px;
+      padding: 15px 0;
+      color: white;
+      text-decoration: none;
+    }
+    &_social {
+      position: relative;
+      font-size: 30px;
+      padding: 15px 0;
+      color: white;
+      text-decoration: none;
+    }
+}
+
+.film_reel {
+  width: 100%;
+}
+
+.work_content-ul {
+  text-decoration: none;
+}
+
+.title {
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+.profile {
+  text-align: right;
+  float: right;
+}
+
+.exit {
+  font-size: 30px;
+  color: white;
+  float: right;
+}
+
+/* Desktop */
+@media (min-width:960px) {
+
+  // create loop for columns
+@for $i from 1 through $grid-columns {
+  .col-md-#{$i} {
+    // create separate columns
+    width: 100% / $grid-columns * $i;
+  }
+}
+
+// create loop for offsets
+@for $i from 1 through $grid-columns {
+  .offset-md-#{$i} {
+    margin-left: 100% / $grid-columns * $i;
+  }
+}
+
+.main_background {
+  background-color: $off_white;
+}
+
+.main_section {
+  clear: both;
+  background-color:$off_white;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 25%;
+  top: 0;
+  left: 0;
+}
+
+.right_section_white {
+  background-color:$off_white;
+    p {
+      width: 100vw;
+    }
+}
+
+.right_section_black {
+    background-color: $dark_gray;
+    p {
+      width: 100vw;
+    }
+}
+
+.title {
+  padding: 0;
+  margin: 0 auto;
+  position: fixed;
+}
+}

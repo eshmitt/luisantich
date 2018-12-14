@@ -14,3 +14,6 @@ Performing navigation across all platforms, due to the navigation overlay javasc
 
 Finally, validating forms, origanally the goal was to use vee-validate and I did attempt to complete the form using the process, as evident of the form.vue file, but the validation was done inline to atleast get the basic need across.
 
+The Git Branching Strategy was used to an extent, I had various problems with forgetting to switch to different branches for different features and at points not being able to push to master because of the file size.
+
+This project will be completed after submission as it is still for a client.

@@ -4,7 +4,7 @@ The HTML style guide used will be W3Schools
 The CSS style guide used will be Airbnb
 The JS style guide used will be Airbnb
 
-Throughout this project I tried to follow a minimalistic design that used overlays as navigation and previews of images. During production there were various elements that could not be solved with the time allowed. Due to leaving a lot of the content till the last minute, certain elements could not become responsive, overlay elements were not achieved as wanted.
+Throughout this project I tried to follow a minimalistic design that used overlays as navigation and previews of images. During production there were various elements that could not be solved with the time allowed. Due to leaving a lot of the content till the last minute, certain elements could not become responsive and overlay elements were not achieved as required.
 
 Validation forms were applied but not to satisfaction. The test plan "execute client-side performance testing" was a plan put into place to test how the website performs on other browsers. The website did not meet the expected outcomes with only Google Chrome being available for viewing as the CSS is removed when used on other platforms.
 

@@ -6,7 +6,7 @@ body {
   min-height: 100vh;
   background-color: $off_white;
   font-family: $font-body;
-  margin: 0px;
+  margin: 0;
 
 }
 
@@ -63,11 +63,9 @@ $col-1-width: $max-width / $grid-columns;
   }
 }
 
-
-
 .main_section {
   clear: both;
-  background-color:$off_white;
+  background-color: $off_white;
   position: relative;
   min-height: 90vh;
   text-align: center;
@@ -77,17 +75,11 @@ $col-1-width: $max-width / $grid-columns;
 .right_section_white {
   clear: both;
   background-color: $off_white;
-    p {
-      width: 400px;
-    }
 }
 
 .right_section_black {
   clear: both;
   background-color: $dark_gray;
-    p {
-      width: 400px;
-    }
 }
 
 .side_preview {
@@ -101,15 +93,26 @@ $col-1-width: $max-width / $grid-columns;
     }
 }
 
-.image_content {
+.img_content {
     width: 100%;
-    padding: 30px;
-    bottom: 0;
     height: auto;
+}
+
+.main_content {
+  width: 100vw;
+  height: 400px;
+  padding-top: 10vh;
+  bottom: 0;
+  margin: 0 auto;
+  float: left;
+  overflow: none;
 }
 
 .work_content-ul {
   text-align: center;
+  text-decoration: none;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 } 
 
 .menu {
@@ -126,8 +129,6 @@ $col-1-width: $max-width / $grid-columns;
     }
 }
 
-
-
 .img_overlay {
   width: 100vw;
   height: 100vw;
@@ -141,6 +142,7 @@ $col-1-width: $max-width / $grid-columns;
   opacity: 0.85;
   position: fixed;
   top: 0;
+  display: none;
 
     &_overlay-ul {
       float: left;
@@ -182,7 +184,9 @@ $col-1-width: $max-width / $grid-columns;
 
 .profile {
   text-align: right;
-  float: right;
+}
+.profile-text {
+  width: 100%;
 }
 
 .exit {
@@ -190,6 +194,35 @@ $col-1-width: $max-width / $grid-columns;
   color: white;
   float: right;
 }
+
+.form {
+  width: 100%;
+}
+
+.top {
+  width: 100%;
+  background: #000;
+  min-height: 70%;
+  height: 70%;
+  display: none;
+    .photo-preview {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+    }  
+}
+
+.bottom {
+  padding: 0;
+  height: 100%;
+  padding-top: 60px;
+  vertical-align: baseline;
+  display: none;
+}
+
 
 /* Desktop */
 @media (min-width:960px) {
@@ -215,7 +248,7 @@ $col-1-width: $max-width / $grid-columns;
 
 .main_section {
   clear: both;
-  background-color:$off_white;
+  background-color: $off_white;
   min-height: 100vh;
   text-align: center;
   padding-top: 25%;
@@ -225,16 +258,20 @@ $col-1-width: $max-width / $grid-columns;
 
 .right_section_white {
   background-color:$off_white;
-    p {
-      width: 100vw;
-    }
 }
 
 .right_section_black {
     background-color: $dark_gray;
-    p {
-      width: 100vw;
-    }
+}
+
+.profile {
+  width: 100%;
+  padding-top: 10vh;
+}
+
+.profile-text {
+  text-align: center;
+  width: 100%;
 }
 
 .title {

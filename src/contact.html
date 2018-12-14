@@ -1,9 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+  <meta charset="utf-8">
+  <title>luisnantich</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link type="text/css" rel="stylesheet" href="C:\Users\Evan\Documents\GitHub\luisantich\src\sass\input.css">
+  <!-- meta tag to make page responsive -->
+  <link rel="stylesheet" type="text/css" href="sass/input.css">
+  <link rel="stylesheet" href="css/fonts/fonts.css">
+  <!-- call css file -->
 </head>
+
 <body>
   <div class="wrapper">
     <div class="col-1">
@@ -24,60 +30,42 @@
       
       <div class="right_content col-md-4">
         <!-- make burger menu -->
-        <div class="menu" id="black_menu" src="images/menu.png" onclick="openNav()">
+        <div class="menu" id="black_menu" src="/images/menu.png" onclick="openNav()">
         </div>
         
         <div class="right_section_white">
-          <div class="contact_form">
-            <form>
-              <p>
-                Name: <input :class="{ error: errors.has('name') }" type="text" v-validate="'required|alpha_num'"  name="name">
-                <span v-show="errors.has('name')" class="error"></span>
-              </p>
-              <p>
-                Email: <input :class="{ error: errors.has('email') }" type="text" v-validate="'required|email'" name="email">
-                <span v-show="errors.has('email')" class="error"></span>
-              </p>
-              <p>
-                Message: <input :class="{ error: errors.has('messgae') }" type="text" v-validate="'requred|msg'" name="message">
-                <span v-show="errors.hass('message')" class="error"></span>
-              </p>
+          <div id="contact_form">
+            <form name="contactForm" onsubmit="return validateForm()" method="post">
+              <p>Name:<input class="{ error: errors.has('name') }" type="text" v-validate="'required|alpha_num'" placeholder="John Doe" name="name" required>
+              <span v-show="errors.has('name')" class="error"></span></p>
+              <p>Email:<input class="{ error: errors.has('email') }" type="text" v-validate="'required|email'" name="email" required>
+                <span v-show="errors.has('email')" class="error"></span></p>
+              <p>Message:<input class="{ error: errors.has('messgae') }" type="text" v-validate="'requred|msg'" name="message" required>
+                <span v-show="errors.hass('message')" class="error"></span></p>
+              <input type="submit" value="Send">
             </form>
           </div>
         </div>
       </div>    
-    </div>
-      
-      <!-- overlay -->
-      <div class="nav_overlay" id="nav_overlay">
-        <!-- button used to close overlay -->
-        <a href="javascript:void(0)" class="close_button" onclick="closeNav()">&times;</a>
-        <!-- void close button so overlay closes on click-->
-        
-        
-        <!-- navigation overlay content -->
-        <div class="nav_content">
-          <ul class="nav_content-ul">
-            <li><a href="about.html">About</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <div class="social">
-              <p>Social Media</p>
-              <ul class="social-ul">
-                <li><a href="https://www.facebook.com/profile.php?id=1836191100">Facebook</a></li>
-                <li><a href="https://www.instagram.com/luisantich/?fbclid=IwAR3bKXy7cKNNwGjYspQUvCDSrkb8SxrPquOPCiJwrz8KYZofmKbhgTu1qYE">Instagram</a></li>
-              </ul>
-            </div>
-          </ul>
-        </div>
+    </div>     
+    <!-- nav overlay-->
+    <div class="nav" onclick=toggleNav()>
+        <ul class="nav_content-ul">
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <ul class="social">
+          <li><a href="https://www.facebook.com/profile.php?id=1836191100">Facebook</a></li>
+          <li><a href="https://www.instagram.com/luisantich/?fbclid=IwAR3bKXy7cKNNwGjYspQUvCDSrkb8SxrPquOPCiJwrz8KYZofmKbhgTu1qYE">Instagram</a></li>
+        </ul>
       </div>
-    </div>
   </div>
-   <!-- call main js file -->
-  <script type="text/javascript" src="js/main.js"></script>
-  <!-- jsdelivr cdn -->
-  <script src="https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js"></script>
-  <!-- unpkg -->
+<!-- call main js file -->
+<script type="text/javascript" src="js/main.js"></script>
+<!-- jsdelivr cdn -->
+<script src="https://cdn.jsdelivr.net/npm/vee-validate@latest/dist/vee-validate.js"></script>
+<!-- unpkg -->
   <script src="https://unpkg.com/vee-validate@latest"></script>
 </body>
 </html>

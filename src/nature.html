@@ -1,75 +1,55 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" rel="stylesheet" href="C:\Users\Evan\Documents\GitHub\luisantich\src\sass\input.css">
+  <meta charset="utf-8">
+  <title>luisnantich</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- meta tag to make page responsive -->
+  <link rel="stylesheet" type="text/css" href="sass/input.css">
+  <link rel="stylesheet" href="sass/fonts/fonts.css">
+  <!-- call css file -->
 </head>
+
 <body>
     <div class="wrapper">
         <div class="col-1">
             <!-- creating side logo with grid system -->
             <div class="film_reel">
-                <a href="index.html" img src="C:\Users\Evan\Documents\GitHub\luisantich\src\images\film_reel.png"></a>
+                <a href="index.html" img src="images/film_reel.png"></a>
             </div>
         </div>        
         <div class="main_content">
-            <div class="col-12">
-                <ul class="image-content">
-                    <li><a href="">
-                        <img src=C:\Users\Evan\Documents\GitHub\luisantich\src\images\nature1.jpg></a>
-                    </li>
-                    <li><a href="">
-                        <img src=C:\Users\Evan\Documents\GitHub\luisantich\src\images\nature2.jpg></a>
-                    </li>
-                    <li><a href="">
-                        <img src=C:\Users\Evan\Documents\GitHub\luisantich\src\images\nature3.jpg></a>
-                    </li>
-                    <li><a href="">
-                        <img src=C:\Users\Evan\Documents\GitHub\luisantich\src\images\nature4.jpg></a>
-                    </li>
-                    <li><a href="">
-                        <img src=C:\Users\Evan\Documents\GitHub\luisantich\src\images\nature5.jpg></a>
-                    </li>
-                    <li><a href="">
-                        <img src=C:\Users\Evan\Documents\GitHub\luisantich\src\images\nature6.jpg></a>
-                    </li>
-                    <li><a href="">
-                        <img src=C:\Users\Evan\Documents\GitHub\luisantich\src\images\natue7.jpg></a>
-                    </li>
-                    <li><a href="">
-                        <img src=C:\Users\Evan\Documents\GitHub\luisantich\src\images\natue8.jpg></a>
-                    </li>
-                    <li><a href="">
-                        <img src=C:\Users\Evan\Documents\GitHub\luisantich\src\images\nature9.jpg></a>
-                    </li>
-                </ul>
+            <div class="col-11">
+                <div class="title">
+                    <img src="images/title_nature.png">
+                </div>
+                <div class="img-content">
+                    <a href=""><img src="images/nature1.jpg" class="img_view" style="width: 100%;"></a>
+                    <a href=""><img src="images/nature2.jpg" class="img_view" style="width: 100%;"></a>
+                    <a href=""><img src="images/nature3.jpg" class="img_view" style="width: 100%;"></a>
+                    <a href=""><img src="images/nature4.jpg" class="img_view" style="width: 100%;"></a>
+                    <a href=""><img src="images/nature5.jpg" class="img_view" style="width: 100%;"></a>
+                    <a href=""><img src="images/nature6.jpg" class="img_view" style="width: 100%;"></a>
+                    <a href=""><img src="images/nature7.jpg" class="img_view" style="width: 100%;"></a>
+                    <a href=""><img src="images/nature8.jpg" class="img_view" style="width: 100%;"></a>
+                    <a href=""><img src="images/nature9.jpg" class="img_view" style="width: 100%;"></a>
+                </div>
             </div>
         </div>
-        <!-- overlay -->
-        <div class="nav_overlay" id="nav_overlay">
-            <!-- button used to close overlay -->
-            <a href="javascript:void(0)" class="close_button" onclick="closeNav()">&times;</a>
-            <!-- void close button so overlay closes on click-->
-            
-            
-            <!-- navigation overlay content -->
-            <div class="nav_content">
-                <ul class="nav_content-ul">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <div class="social">
-                        <p>Social Media</p>
-                        <ul class="social-ul">
-                            <li><a href="https://www.facebook.com/profile.php?id=1836191100">Facebook</a></li>
-                            <li><a href="https://www.instagram.com/luisantich/?fbclid=IwAR3bKXy7cKNNwGjYspQUvCDSrkb8SxrPquOPCiJwrz8KYZofmKbhgTu1qYE">Instagram</a></li>
-                        </ul>
-                    </div>
-                </ul>
-            </div>
-        </div>
+    <!-- nav overlay-->
+    <div class="nav" onclick=toggleNav()>
+      <ul class="nav_content-ul">
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <ul class="social">
+        <li><a href="https://www.facebook.com/profile.php?id=1836191100">Facebook</a></li>
+        <li><a href="https://www.instagram.com/luisantich/?fbclid=IwAR3bKXy7cKNNwGjYspQUvCDSrkb8SxrPquOPCiJwrz8KYZofmKbhgTu1qYE">Instagram</a></li>
+      </ul>
     </div>
-    <script type="text/javascript" src="C:\Users\Evan\Documents\GitHub\luisantich\src\js\main.js"></script>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
     <!-- call js file -->
 </body>
 

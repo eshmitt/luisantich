@@ -2,7 +2,7 @@
 import '../sass/main.scss';
 import Vue from 'vue';
 import VeeValidate from'vee-valitdate';
-import form from './compentents/form.vue';
+import form from 'js/compentents/form.vue';
 import '../index.html';
 import '../about.html';
 import '../contact.html';
@@ -10,10 +10,13 @@ import '../nature.html';
 import '../people.html';
 import '../travel.html';
 import '../work.html';
-import axios from 'axios';
 
 Vue.use(VeeValidate);
 Vue.compnent('contact_form', form);
+
+const form = new Vue ({
+    el: '#contact_form',
+})
 
 function toggleNav() {
     // call the nav
@@ -40,9 +43,20 @@ function toggleImg() {
 
 window.onload(click());
 
-const contact_form = new Vue ({
-    el: '#contact_form',
-})
-
-function nameError() {
+function validateForm () {
+    var name = document.forms["contactForm"]["name"].value;
+    if (name == "") {
+        alert("This is required");
+        return false;
+    }
+    var email = document.forms["contactForm"]["email"].value;
+    if (email == "") {
+        alert("This is required");
+        return false;
+    }
+    var message = document.forms["contactForm"]["message"].value;
+    if (message == "") {
+        alert("This is required");
+        return false;
+    }
 }

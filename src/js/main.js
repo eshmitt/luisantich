@@ -10,7 +10,6 @@ import '../nature.html';
 import '../people.html';
 import '../travel.html';
 import '../work.html';
-import axios from 'axios';
 
 Vue.use(VeeValidate);
 Vue.compnent('contact_form', form);
